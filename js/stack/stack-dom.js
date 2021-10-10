@@ -15,7 +15,13 @@ const clearStackInput = () => {
 };
 
 const renderListStack = () => {
-  // ... your code goes here
+  let html = '';
+  console.log(newStack)
+  for (let i = 0; i < newStack.MAX_SIZE; i++) {
+    html += `<li class="inactive">&nbsp;</li>`;
+  }
+  // Add the items to the ul
+  stackList.insertAdjacentHTML('afterbegin', html);
 };
 
 renderListStack();

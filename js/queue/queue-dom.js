@@ -10,12 +10,19 @@ const dequeue = document.querySelector('.btn-take-dequeue');
 const queue = new Queue();
 
 const clearQueueInput = () => {
-  // ... your code goes here
+  queueInput.value = '';
 };
 
 const generateListQueue = () => {
-  // ... your code goes here
+  let html = '';
+  console.log(queue)
+  for (let i = 0; i < queue.MAX_SIZE; i++) {
+    html += `<li class="inactive">&nbsp;</li>`;
+  }
+  // Add the items to the ul
+  queueUL.insertAdjacentHTML('afterbegin', html);
 };
+
 
 generateListQueue();
 
@@ -29,7 +36,8 @@ const generateWarningQueue = (type) => {
 
 const addToQueue = () => {
   try {
-    // ... your code goes here
+    let newItem = queueInput.value;
+
   } catch (error) {
     // there was an overflow error, handle it
   }
